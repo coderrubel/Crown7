@@ -1,0 +1,150 @@
+// font
+@mixin h_font($weight) {
+  font-weight: $weight;
+  font-family: "Oswald", sans-serif;
+}
+@mixin b_font($weight) {
+  font-weight: $weight;
+  font-family: "Oswald", sans-serif;
+}
+
+@mixin transition($where: all, $time: 0.2s, $ani: ease-in-out) {
+  -webkit-transition: $where $time $ani;
+  -moz-transition: $where $time $ani;
+  -ms-transition: $where $time $ani;
+  -o-transition: $where $time $ani;
+  transition: $where $time $ani;
+}
+
+@mixin bg_property() {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Box-shadow
+@mixin boxshadow($top, $left, $blur, $size, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $size $color;
+    -moz-box-shadow: inset $top $left $blur $size $color;
+    box-shadow: inset $top $left $blur $size $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $size $color;
+    -moz-box-shadow: $top $left $blur $size $color;
+    box-shadow: $top $left $blur $size $color;
+  }
+}
+
+@mixin gradient_bg($direction) {
+  @if $direction == left {
+    background: -webkit-linear-gradient(
+      right,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: -o-linear-gradient(
+      $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: -moz-linear-gradient(
+      to $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: linear-gradient(
+      to $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+  } @else if $direction == right {
+    background: -webkit-linear-gradient(
+      left,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: -o-linear-gradient(
+      $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: -moz-linear-gradient(
+      to $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: linear-gradient(
+      to $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+  } @else if $direction == top {
+    background: -webkit-linear-gradient(
+      bottom,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: -o-linear-gradient(
+      $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: -moz-linear-gradient(
+      to $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: linear-gradient(
+      to $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+  } @else {
+    background: -webkit-linear-gradient(
+      top,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: -o-linear-gradient(
+      $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: -moz-linear-gradient(
+      to $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+    background: linear-gradient(
+      to $direction,
+      rgb(26, 131, 137) 0%,
+      rgb(28, 40, 64) 100%
+    );
+  }
+}
+
+@mixin placeholdercolor($color, $coloropacity) {
+  &::placeholder {
+    opacity: $coloropacity;
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: $coloropacity;
+    color: $color;
+  }
+
+  &::-ms-input-placeholder {
+    opacity: $coloropacity;
+    color: $color;
+  }
+  &:-moz-placeholder {
+    opacity: $coloropacity;
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    opacity: $coloropacity;
+    color: $color;
+  }
+}

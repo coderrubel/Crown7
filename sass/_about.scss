@@ -1,0 +1,142 @@
+.about_area {
+  position: relative;
+  z-index: 1;
+  @extend .bg_alt;
+  padding: 60px 0 0;
+
+  .about_content {
+    margin-bottom: 30px;
+
+    h2 {
+      color: $text;
+      background: $brand;
+      -webkit-clip-path: polygon(14% 0, 100% 0, 91% 100%, 0 100%);
+      clip-path: polygon(10% 0, 100% 0, 91% 100%, 0 100%);
+      font-weight: 700;
+      font-size: 24px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 35px;
+      display: block;
+      border: 2px solid $text;
+      border-radius: 2px;
+      padding: 10px 50px;
+      display: inline-block;
+    }
+
+    p {
+      line-height: 1.5;
+      color: $text;
+      font-size: 16px;
+    }
+  }
+
+  .about_img {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+
+    &:after {
+      position: absolute;
+      z-index: -1;
+      left: 15%;
+      bottom: 0;
+      width: 60%;
+      height: 100px;
+      content: "";
+      background: $brand_2;
+      filter: blur(40px);
+    }
+  }
+}
+
+.rotating_coin {
+  width: 100px;
+  height: 100px;
+  perspective: 600px;
+  position: absolute;
+  top: 60px;
+  right: 125px;
+
+  .card {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: rotate 1.5s infinite ease-in-out;
+    border: none;
+    background: transparent;
+    top: -70px;
+    left: 43px;
+
+    .card_face {
+      position: absolute;
+      width: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      height: 100%;
+      line-height: 260px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-size: 40px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transition: all 0.3s ease-in-out;
+
+      &.card_face_front {
+        background: url("../img/coin.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &.card_face_back {
+        background: url("../img/coin.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all 0.3s ease-in-out;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotateY(0deg);
+    }
+
+    to {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+// Responsive
+@media #{$medium_device} {}
+
+// For Tab device
+@media #{$tab_device} {
+  .about_area {
+    padding: 50px 0 0;
+
+    .about_content h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media #{$small_mobile} {
+  .about_area {
+    padding: 40px 0 0;
+
+    .about_content h2 {
+      font-size: 20px;
+    }
+  }
+}
+
+@media #{$large_mobile} {}

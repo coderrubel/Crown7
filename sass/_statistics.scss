@@ -1,0 +1,163 @@
+.statistics_area {
+  padding: 70px 0 30px;
+  position: relative;
+  z-index: 1;
+
+  .heading h2 {
+
+    color: $text;
+    background: $brand;
+    -webkit-clip-path: polygon(14% 0, 100% 0, 91% 100%, 0 100%);
+    clip-path: polygon(10% 0, 100% 0, 91% 100%, 0 100%);
+    font-size: 24px;
+    padding: 10px 50px;
+    border: 2px solid $text;
+    border-radius: 2px;
+
+  }
+
+  .our_statist {
+    display: flex;
+    justify-content: space-between;
+    // background-image: url("../img/statis.png");
+    // height: 232px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .statist {
+      width: 100%;
+      height: 90px;
+      background: #ce248a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+      p {
+        text-align: center;
+
+        span {
+          display: block;
+          margin-top: 9px;
+        }
+      }
+    }
+
+    /*
+    .statist_1 {
+      position: absolute;
+      top: 105px;
+      font-size: 16px;
+    }
+
+    .statist_2 {
+      position: absolute;
+      top: 105px;
+      font-size: 16px;
+    }
+
+    .statist_3 {
+      position: absolute;
+      top: 105px;
+      font-size: 16px;
+    }
+
+    .statist_4 {
+      position: absolute;
+      top: 105px;
+      font-size: 16px;
+    }
+
+    .statist_5 {
+      position: absolute;
+      top: 105px;
+      font-size: 16px;
+    }
+
+    .statist_6 {
+      position: absolute;
+      top: 105px;
+      right: 50px;
+      font-size: 16px;
+    }
+*/
+  }
+
+  @extend .bg_alt;
+
+  .table_wrap.color_table {
+
+    .table th,
+    .table td {
+      color: #fff;
+    }
+  }
+
+  .table_wrap {
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 5.11px 1.89px rgba(0, 0, 0, 0.09);
+
+    .invest-title {
+      padding: 10px 0px;
+
+      h3 {
+        color: $text;
+        font-size: 20px;
+
+        span {
+          color: $brand;
+        }
+      }
+    }
+
+    .table {
+      border: none;
+      margin: 0px;
+
+      tr {
+        margin: 5px 0px;
+        height: 30px;
+        background: rgb(125, 21, 135);
+        background: linear-gradient(90deg, rgba(125, 21, 135, 1) 0%, rgba(158, 27, 135, 1) 50%, rgba(194, 34, 138, 1) 100%);
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        &:nth-of-type(2n) {
+          background: rgb(125, 21, 135);
+          background: linear-gradient(90deg, rgba(125, 21, 135, 1) 0%, rgba(158, 27, 135, 1) 50%, rgba(194, 34, 138, 1) 100%);
+        }
+      }
+    }
+
+    .table th,
+    .table td {
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      padding: 8px;
+    }
+  }
+}
+
+// Responsive
+@media #{$medium_device} {}
+
+// For Tab device
+@media #{$tab_device} {}
+
+@media #{$small_mobile} {
+  .statistics_area {
+    padding: 45px 0 30px;
+
+    .table_wrap {
+      margin: 15px 0;
+    }
+  }
+}
+
+@media #{$large_mobile} {}

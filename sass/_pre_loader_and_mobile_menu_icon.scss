@@ -1,0 +1,139 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99900;
+  transition: 1s;
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: #000;
+    transition: 1s;
+  }
+  &:after {
+    left: auto;
+    right: 0;
+  }
+  &:before {
+    right: auto;
+    left: 0;
+  }
+}
+.preloader.complete {
+  opacity: 0;
+  visibility: hidden;
+}
+.preloader.complete:after {
+  right: -50%;
+}
+.preloader.complete:before {
+  left: -50%;
+}
+
+.loader.completein {
+  opacity: 0;
+}
+
+.loader {
+  border-radius: 50px;
+  line-height: 100px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 99901;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($brand, 0.9);
+    border-radius: 50px;
+    opacity: 0;
+  }
+
+  &:before {
+    transform: scale(0);
+    animation: pulse 2s infinite ease-in;
+  }
+
+  &:after {
+    animation: pulse 2s 1s infinite ease-in;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+// hamburger
+.mega_nav .navbar-toggler {
+  border: none;
+  position: relative;
+  &:focus,
+  &:hover {
+    background-color: transparent;
+  }
+
+  .icon-bar {
+    transition: all 0.25s;
+    height: 3px;
+    width: 100%;
+    background: $brand;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    &:nth-child(2) {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+    &:nth-child(3) {
+      opacity: 0;
+      top: 6px;
+    }
+    &:nth-child(4) {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+      top: 12px;
+    }
+  }
+
+  &.collapsed .icon-bar:nth-child(2),
+  &.collapsed .icon-bar:nth-child(4) {
+    transform: rotate(0);
+  }
+  &.collapsed .icon-bar:nth-child(3) {
+    opacity: 1;
+  }
+}

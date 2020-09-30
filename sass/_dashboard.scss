@@ -1,0 +1,281 @@
+.dboard_area {
+  background: $bg_color;
+  padding: 50px 150px;
+
+  .container {
+    @extend .bg_alt;
+    padding: 30px;
+    box-shadow: 2px 2px 37px #2d2a4e;
+  }
+
+  .heading h2 {
+    background: none;
+    margin: 0;
+    color: $text;
+    border: none;
+    margin-bottom: 20px;
+
+    .font_icon {
+      margin-right: 10px;
+    }
+  }
+
+  .dash_nav {
+    margin: 10px 0;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .dash_nav a {
+    color: black;
+    background: #fff;
+    padding: 5px;
+    margin: 10px 0;
+    border-top: 4px solid $brand;
+    border-bottom: 4px solid $brand_2;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    &:hover {
+      color: $text;
+      background: $brand;
+      border-top: 4px solid $text;
+      border-bottom: 4px solid $text;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .font_icon {
+      margin-right: 7px;
+      border-right: 2px solid $brand_2;
+      padding-right: 7px;
+      font-size: 24px;
+      color: $brand_2;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover .font_icon {
+      color: $text;
+      transition: all 0.3s ease-in-out;
+    }
+
+
+  }
+
+  .user_info {
+    padding: 10px 5px;
+    background: #fff;
+    border: 2px solid #ce248a;
+    color: #05012c;
+    margin: 10px auto;
+    max-width: 180px;
+    min-height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    p {
+      margin: 5px;
+
+      span {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .font_icon {
+        font-size: 36px;
+        color: $brand;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .account_info {
+    padding: 10px 5px;
+    background: #fff;
+    border: 2px solid #ce248a;
+    color: #05012c;
+    margin: 10px auto;
+    max-width: 350px;
+    min-height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    p {
+      margin: 5px;
+
+      span {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .font_icon {
+        font-size: 36px;
+        color: $brand;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .payment_info {
+    background: #fff;
+    border: 2px solid #ce248a;
+    color: #05012c;
+    margin: 10px auto;
+    max-width: 130px;
+    min-height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    p {
+      margin: 5px;
+
+      span {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+  }
+
+  .db_summary {
+    text-align: center;
+    background: $bg_color;
+    margin: 15px 0;
+    padding: 15px 30px;
+
+    h6 {
+      font-size: 20px;
+      padding: 5px 0 10px;
+      color: $brand;
+    }
+
+    p {
+      background-color: #fff;
+      color: $bg_color;
+      padding: 5px 10px;
+
+      a {
+        color: $bg_color;
+        transition: all 0.3s ease-in-out;
+        margin: 5px;
+
+        &:hover {
+          color: $brand_2;
+        }
+      }
+    }
+  }
+
+  .dw_status {
+    text-align: center;
+    color: black;
+    background: rgb(125, 21, 135);
+    background: linear-gradient(90deg, rgba(125, 21, 135, 1) 0%, rgba(158, 27, 135, 1) 50%, rgba(194, 34, 138, 1) 100%);
+    padding: 20px;
+    margin: 10px 0;
+
+    h5 {
+      color: $text;
+    }
+
+    ul li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      position: relative;
+      z-index: 1;
+      background: $text;
+      margin: 20px;
+      border-radius: 7px;
+    }
+  }
+
+  .upline {
+    background: $brand;
+    color: $text;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+// Responsive
+@media #{$medium_device} {
+  .dboard_area .dash_nav a {
+    padding: 15px;
+  }
+}
+
+// For Tab device
+@media #{$tab_device} {
+  .dboard_area .dash_nav a {
+    padding: 10px 5px;
+    font-size: 14px;
+    border-width: 1px;
+    width: 145px;
+
+    &:hover {
+      border-width: 1px;
+    }
+  }
+
+  .dboard_area .user_info {
+    flex-direction: column;
+
+    p {
+      margin: 3px;
+      font-size: 16px;
+    }
+  }
+
+  .dboard_area .db_summary ul li {
+    font-size: 14px;
+  }
+}
+
+@media #{$small_mobile} {
+  .dboard_area {
+    .container {
+      padding: 20px;
+    }
+  }
+
+  .dboard_area .dash_nav a {
+    padding: 5px 3px;
+    font-size: 14px;
+    border-width: 1px;
+    width: 100px;
+
+    &:hover {
+      border-width: 1px;
+    }
+  }
+
+  .dboard_area .user_info {
+    flex-direction: column;
+
+    p {
+      margin: 5px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media #{$large_mobile} {}

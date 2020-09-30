@@ -1,0 +1,136 @@
+// invest paln
+.investment_plan {
+  position: relative;
+  z-index: 1;
+  padding: 60px 0 30px;
+  background: $bg_color;
+
+  .heading {
+    h2 {
+      color: $text;
+      background: $brand_2;
+      -webkit-clip-path: polygon(14% 0, 100% 0, 91% 100%, 0 100%);
+      clip-path: polygon(10% 0, 100% 0, 91% 100%, 0 100%);
+      font-size: 24px;
+      padding: 10px 50px;
+    }
+  }
+
+  .single_plan {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    top: 0;
+    box-shadow: 0px 0px 3.65px 1.35px rgba(248, 197, 39, 0.36);
+    background: $text;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      content: "";
+      width: 100%;
+      height: 110px;
+      background: rgb(125, 21, 135);
+      background: linear-gradient(90deg, rgba(125, 21, 135, 1) 0%, rgba(158, 27, 135, 1) 50%, rgba(194, 34, 138, 1) 100%);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      top: -5px;
+      box-shadow: 3px 3px 9px 0px rgba(245, 188, 33, 0.651);
+    }
+
+    .i_price {
+      width: 150px;
+      height: 50px;
+      margin: 0 auto;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background: $text;
+      -webkit-clip-path: polygon(14% 0, 100% 0, 91% 100%, 0 100%);
+      clip-path: polygon(10% 0, 100% 0, 91% 100%, 0 100%);
+      border: 2px solid $brand_2;
+
+      h3 {
+        font-size: 30px;
+        width: 90px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $brand;
+        -webkit-clip-path: polygon(14% 0, 100% 0, 91% 100%, 0 100%);
+        clip-path: polygon(10% 0, 100% 0, 91% 100%, 0 100%);
+      }
+    }
+
+    h5 {
+      padding-top: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      color: $text;
+    }
+
+    ul {
+      padding: 10px;
+
+      li {
+        height: 35px;
+        padding: 10px 0;
+        margin: 5px 0;
+        border-radius: 3px;
+        color: #fff;
+        background: rgb(125, 21, 135);
+        background: linear-gradient(90deg, rgba(125, 21, 135, 1) 0%, rgba(158, 27, 135, 1) 50%, rgba(194, 34, 138, 1) 100%);
+        // @include gradient_bg(bottom);
+
+        p .font_icon {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .btn_1 {
+      background: rgb(125, 21, 135);
+      background: linear-gradient(90deg, rgba(125, 21, 135, 1) 0%, rgba(158, 27, 135, 1) 50%, rgba(194, 34, 138, 1) 100%);
+      -webkit-clip-path: polygon(14% 0, 100% 0, 91% 100%, 0 100%);
+      clip-path: polygon(10% 0, 100% 0, 91% 100%, 0 100%);
+      padding: 10px 30px;
+      border: 2px solid #bababa;
+    }
+
+    a {
+      color: $text;
+    }
+  }
+}
+
+// Responsive
+@media #{$medium_device} {}
+
+@media #{$tab_device} {
+  .investment_plan {
+    padding: 40px 0 10px;
+  }
+}
+
+@media #{$small_mobile} {
+  .investment_plan .container {
+    padding: 40px 0px 10px;
+  }
+
+  .investment_plan .single_plan::before {
+    background: $brand_2;
+    height: 70px;
+  }
+}
+
+@media #{$large_mobile} {}
