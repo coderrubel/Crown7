@@ -17,8 +17,7 @@
     <!-- aos Css -->
     <link rel="stylesheet" type="text/css" href="css/aos.css" />
     <!-- Google Font Oswald -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link href="css/style.css" rel="stylesheet" />
 </head>
@@ -88,7 +87,7 @@
                 </div>
             </div>
         </div>
-        </>
+    </div>
 </header>
 <!-- End Header Section -->
 
@@ -100,39 +99,105 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-12">
                         <div class="heading">
-                            <h2 class="">CONTACT US</h2>
+                            <h2 class=""> My Dashboard</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-md-8">
-                        <div class="login_wrap">
-                            <form action="index.html">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="dash_nav">
+                            <a href="#"><i class="font_icon fas fa-chart-line"></i>Dashboard</a>
+                            <a href="#"><i class="font_icon fas fa-chart-line"></i>Make Invest</a>
+                            <a href="#"><i class="font_icon fas fa-landmark"></i></i>My Investment</a>
+                            <a href="#"><i class="font_icon fas fa-hand-holding-usd"></i>Withdraw Funds</a>
+                            <a href="#"><i class="font_icon fas fa-history"></i>Earning History</a>
+                            <a href="#"><i class="font_icon fas fa-history"></i>Earning History</a>
+                            <a href="#"><i class="font_icon fas fa-user-friends"></i>My Referral</a>
+                            <a href="#"><i class="font_icon fas fa-grip-horizontal"></i>Affiliate Banners</a>
+                            <a href="#"><i class="font_icon fas fa-user-cog"></i>Security Setting</a>
+                            <a href="#"><i class="font_icon fas fa-user-edit"></i>Edit Profile</a>
+                            <a href="#"><i class="font_icon fas fa-sign-out-alt"></i>Logout</a>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="login_wrap edit_account">
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="capcha" class="left"><i class="far fa-user fa_icon"></i></label>
+                                    <p class="form-control right">Username : test</p>
+                                    <!-- <input type="text" class="form-control right" placeholder="Username"> -->
+                                </div>
+                                <div class="form-group">
+                                    <label for="capcha" class="left"><i class="fas fa-calendar-alt fa_icon"></i></label>
+                                    <p class="form-control right">Registration Date : 17-12-2019</p>
+                                    <!-- <input type="password" class="form-control right" placeholder="Registration Date"> -->
+                                </div>
                                 <div class="form-group">
                                     <label for="capcha" class="left"><i class="fas fa-user fa_icon"></i></label>
-                                    <input type="text" class="form-control right" placeholder="Your  Name">
+                                    <input type="text" class="form-control right" placeholder="Your Full Name">
+                                </div>
+                                <!-- <div class="form-group">
+                                    <label for="capcha" class="left"><i
+                                            class="fas fa-envelope-open-text fa_icon"></i></label>
+                                    <input type="text" class="form-control right" placeholder="Your E-mail Address">
                                 </div>
                                 <div class="form-group">
                                     <label for="capcha" class="left"><i
                                             class="fas fa-envelope-open-text fa_icon"></i></label>
-                                    <input type="text" class="form-control right" placeholder="Your E-mail">
-                                </div>
-                                <textarea class="form-group" placeholder="Your Message" rows="4"></textarea>
-                                <!-- <div class="form-group">
-                                    <label for="capcha" class="left">8543</label>
-                                    <input type="text" class="form-control right">
+                                    <input type="text" class="form-control right" placeholder="Retype E-mail">
                                 </div> -->
-                                <button type="submit" class="boxed_btn">Send</button>
+                                <div class="form-group">
+                                    <label for="capcha" class="left"><i class="fas fa-key fa_icon"></i></label>
+                                    <input type="password" class="form-control right" placeholder="New Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="capcha" class="left"><i class="fas fa-key fa_icon"></i></label>
+                                    <input type="password" class="form-control right" placeholder="Retype Password">
+                                </div>
 
-                                <!-- <a href="sign_up.html" class="boxed_btn">Sign Up</a> -->
+                                <div class="form-group">
+                                    <label for="capcha" class="left"><i
+                                            class="fas fa-money-check-alt fa_icon"></i></label>
+                                    <input type="text" class="form-control right"
+                                        placeholder="Your PerfectMoney Account">
+                                </div>
+                                <div class="form-group">
+                                    <label for="capcha" class="left"><i
+                                            class="fas fa-money-check-alt fa_icon"></i></label>
+                                    <input type="text" class="form-control right" placeholder="Your Bitcoin Account">
+                                </div>
+                                <div class="form-group">
+                                    <label for="capcha" class="left"><i
+                                            class="fas fa-envelope-open-text fa_icon"></i></label>
+                                    <p class="form-control right">Your E-mail Address : </p>
+                                    <!-- <input type="text" class="form-control right" placeholder="Your E-mail Address"> -->
+                                </div>
+                                <!--
+                                <div class="form-group">
+                                    <label for="capcha" class="left"><i class="fas fa-users fa_icon"></i></label>
+                                    <input type="text" class="form-control text-center right"
+                                        placeholder="Your Upline:">
+                                </div>
+
+                                 <div class="form-group mb-5">
+                                    <label for="capcha" class="capcha">8543</label>
+                                    <input type="text" class="form-control" id="capcha">
+                                </div>
+                               
+                                <div class="custom-control custom-checkbox text-center">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="abc">
+                                    <label class="custom-control-label " for="customCheck">
+                                        I agree with our <a href="">Terms and Conditions</a>
+                                    </label>
+                                </div> 
+                             -->
+                                <button type="submit" class="boxed_btn">Change Account Data</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
 </section>
 <!-- End Dashboard Section -->
 

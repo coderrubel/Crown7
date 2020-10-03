@@ -6,7 +6,7 @@
   background-color: $heading;
 
   .header_top {
-    background: $brand;
+    background: #b91d7bc2;
     padding: 10px;
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 23% 100%);
 
@@ -42,6 +42,20 @@
     height: 60px;
     z-index: 1;
 
+    &:after {
+      z-index: -1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      position: absolute;
+      background: $brand;
+      -webkit-clip-path: polygon(23% 0, 100% 0, 100% 100%, 28% 100%);
+      clip-path: polygon(23% 0, 100% 0, 100% 100%, 28% 100%);
+
+    }
+
     .navbar-brand {
       font-size: 36px;
       color: #fff;
@@ -53,23 +67,26 @@
     }
 
     .navbar .navbar-nav>li.nav-item {
-      padding: 0 20px;
+      padding: 0 0px;
 
       >a {
         position: relative;
         display: inline-block;
         z-index: 1;
-        @include b_font(500);
+        @include b_font(400);
         padding: 7px 10px;
-        font-size: 16px;
+        font-size: 14px;
         color: #fff;
-        border: 1px solid transparent;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
         transition: all 0.3s ease-in-out;
         clip-path: polygon(12% 0, 100% 0%, 92% 100%, 0% 100%);
 
         &:hover {
           color: $text;
-          background-color: $brand;
+          border-top: 1px solid $text;
+          border-bottom: 1px solid $text;
+          background-color: $brand_2;
           clip-path: polygon(12% 0, 100% 0%, 92% 100%, 0% 100%);
           transition: all 0.3s ease-in-out;
         }
@@ -99,6 +116,11 @@
 
 // For Tab device
 @media #{$tab_device} {
+  .header_wrap .header_top .header_top_left {
+    width: 55%;
+    font-size: 14px;
+  }
+
   .header_wrap .header_bottom {
     height: 60px;
     padding: 10px 0;
@@ -107,7 +129,7 @@
       padding: 0px 15px;
 
       a {
-        padding: 7px 10px;
+        padding: 7px 4px;
         font-size: 14px;
       }
     }
@@ -134,7 +156,7 @@
       left: -100%;
       left: 0px;
       top: 77px;
-      background: rgba(0, 6, 8, 0.9);
+      background: rgb(82, 23, 98);
       position: absolute;
       width: 100%;
 
@@ -156,7 +178,11 @@
   }
 
   .header_wrap {
-    padding: 10px 0;
+    font-size: 12px;
+
+    .header_top .header_top_left {
+      width: 55%;
+    }
 
     .header_bottom {
       height: 60px;

@@ -17,8 +17,7 @@
     <!-- aos Css -->
     <link rel="stylesheet" type="text/css" href="css/aos.css" />
     <!-- Google Font Oswald -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link href="css/style.css" rel="stylesheet" />
 </head>
@@ -88,7 +87,7 @@
                 </div>
             </div>
         </div>
-        </>
+    </div>
 </header>
 <!-- End Header Section -->
 
@@ -100,39 +99,112 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-12">
                         <div class="heading">
-                            <h2 class="">CONTACT US</h2>
+                            <h2 class=""> My Dashboard</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-md-8">
-                        <div class="login_wrap">
-                            <form action="index.html">
-                                <div class="form-group">
-                                    <label for="capcha" class="left"><i class="fas fa-user fa_icon"></i></label>
-                                    <input type="text" class="form-control right" placeholder="Your  Name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="capcha" class="left"><i
-                                            class="fas fa-envelope-open-text fa_icon"></i></label>
-                                    <input type="text" class="form-control right" placeholder="Your E-mail">
-                                </div>
-                                <textarea class="form-group" placeholder="Your Message" rows="4"></textarea>
-                                <!-- <div class="form-group">
-                                    <label for="capcha" class="left">8543</label>
-                                    <input type="text" class="form-control right">
-                                </div> -->
-                                <button type="submit" class="boxed_btn">Send</button>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="dash_nav">
+                            <a href="#"><i class="font_icon fas fa-chart-line"></i>Dashboard</a>
+                            <a href="#"><i class="font_icon fas fa-chart-line"></i>Make Invest</a>
+                            <a href="#"><i class="font_icon fas fa-landmark"></i></i>My Investment</a>
+                            <a href="#"><i class="font_icon fas fa-hand-holding-usd"></i>Withdraw Funds</a>
+                            <a href="#"><i class="font_icon fas fa-history"></i>Earning History</a>
+                            <a href="#"><i class="font_icon fas fa-history"></i>Earning History</a>
+                            <a href="#"><i class="font_icon fas fa-user-friends"></i>My Referral</a>
+                            <a href="#"><i class="font_icon fas fa-grip-horizontal"></i>Affiliate Banners</a>
+                            <a href="#"><i class="font_icon fas fa-user-cog"></i>Security Setting</a>
+                            <a href="#"><i class="font_icon fas fa-user-edit"></i>Edit Profile</a>
+                            <a href="#"><i class="font_icon fas fa-sign-out-alt"></i>Logout</a>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
 
-                                <!-- <a href="sign_up.html" class="boxed_btn">Sign Up</a> -->
-                            </form>
+
+
+                        <div class="account_details_area">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="invest_info">
+                                        <div class="info_wrap">
+                                            <div class="icon">
+                                                <i class="font_icon fas fa-chalkboard-teacher"></i>
+                                            </div>
+                                            <p class="account_balance">
+                                                Account Balance <span>$0.00</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="invest_info">
+                                        <div class="info_wrap">
+                                            <div class="icon">
+                                                <i class="font_icon fas fa-chalkboard-teacher"></i>
+                                            </div>
+                                            <p class="account_balance">
+                                                Pending Withdrawals <span>$0.00</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="deposit_info">
+                                    <input type="radio">
+                                    <h3> PerfectMoney </h3>
+                                    <p>Available :<span>$10</span></p>
+                                    <p>Pending :<span>$30</span></p>
+                                    <p>Account :<span>not set</span></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="deposit_info">
+                                    <input type="radio">
+                                    <h3> Payeer </h3>
+                                    <p>Available :<span>$10</span></p>
+                                    <p>Pending :<span>$30</span></p>
+                                    <p>Account :<span>not set</span></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="deposit_info">
+                                    <input type="radio">
+                                    <h3> Bitcoin </h3>
+                                    <p>Available :<span>$10</span></p>
+                                    <p>Pending :<span>$30</span></p>
+                                    <p>Account : <span>not set</span></p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-12">
+                                <div class="invest_info">
+                                    <div class="info_wrap">
+                                        <p class="text-center">Withdrawal Amount <span>($) <input type="text"
+                                                    placeholder="0.00"></span>
+                                        </p>
+                                        <textarea class="withdrawal_message" placeholder="Your Message" rows="4"
+                                            width="100%"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" value="Request" class="boxed_btn">
+
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
 </section>
 <!-- End Dashboard Section -->
 

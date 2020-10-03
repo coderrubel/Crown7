@@ -1,6 +1,7 @@
 // kogin_area, support_area, account_info area
 
 // login page
+
 .login_wrap {
   text-align: right;
   width: 100%;
@@ -36,6 +37,8 @@
       border-bottom: 3px solid $brand_2;
       border-radius: 0 10px 10px 0;
       margin-bottom: 25px;
+      text-align: left;
+      color: #000;
     }
   }
 
@@ -238,6 +241,15 @@
 
 .custom-control-input:checked~.custom-control-label:before {
   background: $brand_2 !important;
+}
+
+.login_wrap.edit_account {
+  margin-top: 24px;
+}
+
+.login_wrap.edit_account .boxed_btn {
+  width: 300px;
+  display: block;
 }
 
 @media #{$medium_device} {

@@ -24,11 +24,28 @@
       display: inline-block;
     }
 
+    h5 {
+      color: $brand;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
     p {
       line-height: 1.5;
       color: $text;
       font-size: 16px;
     }
+
+    .client {
+      color: $brand;
+      margin-bottom: 5px;
+    }
+
+    .best {
+      margin-top: 15px;
+      //  border-bottom: 1px solid #ddd;
+    }
+
   }
 
   .about_img {
@@ -46,6 +63,36 @@
       content: "";
       background: $brand_2;
       filter: blur(40px);
+    }
+  }
+
+  .heading {
+    margin: 5px;
+
+    h2 {
+      color: #ffffff;
+      background: #6f1387;
+      -webkit-clip-path: polygon(14% 0, 100% 0, 91% 100%, 0 100%);
+      clip-path: polygon(10% 0, 100% 0, 91% 100%, 0 100%);
+      font-size: 24px;
+      padding: 10px 50px;
+    }
+  }
+
+  .mission {
+    background: #ce248a;
+    display: inline-block;
+    margin: 10px 0;
+    -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    padding: 10px 35px;
+    min-height: 180px;
+    text-align: justify;
+
+    h3 {
+      font-size: 24px;
+      padding: 10px 0;
+      text-align: center;
     }
   }
 }

@@ -51,7 +51,7 @@
       }
 
       span {
-        color: $brand;
+        color: $text;
       }
     }
   }
@@ -86,7 +86,7 @@
         }
 
         &:hover {
-          color: $brand;
+          color: #ffffffa3;
         }
       }
     }
@@ -94,11 +94,9 @@
 }
 
 // Responsive
-@media #{$medium_device} {
-}
+@media #{$medium_device} {}
 
-@media #{$tab_device} {
-}
+@media #{$tab_device} {}
 
 @media #{$small_mobile} {
   .simple_clean .f_widget_2 .q_links {
@@ -106,5 +104,4 @@
   }
 }
 
-@media #{$large_mobile} {
-}
+@media #{$large_mobile} {}

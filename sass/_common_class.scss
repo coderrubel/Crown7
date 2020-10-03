@@ -10,7 +10,7 @@
     margin-bottom: 35px;
     display: block;
     background: $brand_2;
-    border: 2px solid $brand;
+    border: 2px solid $text;
     border-radius: 5px;
     padding: 7px 15px;
     display: inline-block;
@@ -18,7 +18,7 @@
 }
 
 .heading h4 {
-  color: #fff;
+  color: $text;
   font-size: 20px;
   background: $bg_color;
   color: $brand;

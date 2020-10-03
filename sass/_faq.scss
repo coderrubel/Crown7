@@ -1,0 +1,194 @@
+.faq_area {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+    background: #05012c;
+}
+
+.faq_area .heading h2 {
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 35px;
+    display: inline-block;
+    color: #ffffff;
+    background: #ce248a;
+    -webkit-clip-path: polygon(14% 0, 100% 0, 91% 100%, 0 100%);
+    clip-path: polygon(10% 0, 100% 0, 91% 100%, 0 100%);
+    font-size: 24px;
+    padding: 10px 50px;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.faq_area .faq_content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq_area .faq_content h4 {
+    color: #e53946;
+    margin-bottom: 5px;
+}
+
+.faq_area .faq_content .faq_tab_nav {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.faq_area .faq_content .faq_tab_nav a {
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+    color: white;
+    font-size: 16px;
+    border-radius: 25px;
+    line-height: 0.8;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #ce248a;
+}
+
+.faq_area .faq_content .faq_tab_nav a:hover,
+.faq_area .faq_content .faq_tab_nav a.active {
+    background: #6e1387;
+}
+
+.accordion_wrapper {
+    width: 100%;
+}
+
+.accordion_wrapper h3 {
+    font-size: 32px;
+}
+
+.accordion_wrapper .accordion .card {
+    margin-bottom: 15px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.accordion_wrapper .accordion .card .card-header {
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion_wrapper .accordion .card .card-header .btn.btn-link {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    color: #fff;
+    background: #ce248a;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 15px;
+    padding: 15px 15px 15px 40px;
+    white-space: normal;
+    /*  border: 2px solid #00c6cb; */
+}
+
+.accordion_wrapper .accordion .card .card-header .btn.btn-link.collapsed {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.accordion_wrapper .accordion .card .card-header .btn.btn-link.collapsed:before {
+    content: "\f424";
+}
+
+.accordion_wrapper .accordion .card .card-header .btn.btn-link:before {
+    position: absolute;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    right: auto;
+    left: 0px;
+    color: #fff;
+    border-radius: 5px;
+    content: "\f062";
+    padding: 10px;
+    top: calc(50% - 22px);
+    font-family: "Font Awesome\ 5 Free";
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.accordion_wrapper .accordion .card .card-body {
+    color: #fff;
+    background: #a71b7e;
+    padding: 15px 15px 15px 40px;
+    font-size: 16px;
+    line-height: 1.8;
+    border-radius: 0 0 25px 25px;
+    z-index: -1;
+    margin-top: -13px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .faq_area .faq_content .faq_tab_nav a {
+        padding: 10px 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .accordion_wrapper {
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .faq_area {
+        padding: 40px 0 20px;
+    }
+
+    .faq_area .faq_content {
+        margin-bottom: 30px;
+    }
+
+    .accordion_wrapper {
+        margin-bottom: 35px;
+    }
+
+    .accordion_wrapper h3 {
+        font-size: 28px;
+    }
+
+    .accordion_wrapper .accordion .card {
+        margin-bottom: 5px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+    }
+
+    .accordion_wrapper .accordion .card .card-header button.btn.btn-link {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 10px 40px 10px 25px;
+    }
+
+    .accordion_wrapper .accordion .card .card-header button.btn.btn-link:after {
+        top: calc(50% - 26px);
+    }
+
+    .accordion_wrapper .accordion .card .card-body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
